@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annie Couture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5efe6;
+      color: #222;
+      line-height: 1.6;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    nav img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('luxury-silk-bg.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding-top: 80px;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5rem;
+      letter-spacing: 2px;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .accordion {
+      background-color: #fff;
+      color: #444;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.1rem;
+      transition: 0.4s;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .accordion.active, .accordion:hover {
+      background-color: #f3e9db;
+    }
+    .panel {
+      padding: 0 1rem;
+      display: none;
+      background-color: #fefefe;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+    .panel ul {
+      padding-left: 1.2rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      padding: 0.7rem 1.2rem;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+    .btn i {
+      font-size: 1.2rem;
+    }
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #222;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .contact-options {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .contact-options a {
+      display: block;
+      padding: 0.8rem 1.2rem;
+      color: #222;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+    }
+    .contact-options a:last-child {
+      border-bottom: none;
+    }
+    .contact-options.show {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+      }
+      header {
+        height: 70vh;
+        padding-top: 100px;
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="logo.jpeg" alt="Annie Couture Logo" />
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">What We Do</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Annie Couture</h1>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Annie Couture is a luxury atelier rooted in heritage and driven by passion. For over 20 years, we’ve been crafting custom bridal wear and occasion pieces that celebrate individuality, tradition, and timeless style. Every piece is designed with love in Punjab and worn around the world.</p>
+  </section>
+
+  <section id="services">
+    <h2>What We Do</h2>
+    <button class="accordion">Explore Our Offerings</button>
+    <div class="panel">
+      <ul>
+        <li>Bespoke bridal outfits</li>
+        <li>Designer suits & lehengas</li>
+        <li>Traditional craftsmanship with modern silhouettes</li>
+        <li>Customizations based on your dream vision</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Our Work</h2>
+    <p>We don’t just create outfits, we create moments. Discover our latest designs, client diaries, and couture stories on our Instagram.</p>
+    <a class="btn" href="https://www.instagram.com/anniecouture.in" target="_blank">
+      <i class="fab fa-instagram"></i> View Us on Instagram
+    </a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/919872201608">9872201608</a></p>
+    <p><strong>Address:</strong> Annie Couture – 46B Model Town, Phagwara, Punjab</p>
+    <p><strong>Email:</strong> <a href="mailto:anniecouture9@gmail.com">anniecouture9@gmail.com</a></p>
+  </section>
+
+  <div class="floating-button" onclick="toggleContactOptions()">Make an Appointment</div>
+  <div class="contact-options" id="contactOptions">
+    <a href="https://wa.me/919872201608" target="_blank">WhatsApp Us</a>
+    <a href="https://www.instagram.com/anniecouture.in/" target="_blank">DM on Instagram</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Annie Couture. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function toggleContactOptions() {
+        document.getElementById('contactOptions').classList.toggle('show');
+      }
+      window.toggleContactOptions = toggleContactOptions;
+
+      const acc = document.querySelector(".accordion");
+      const panel = document.querySelector(".panel");
+      if (acc && panel) {
+        acc.addEventListener("click", function () {
+          this.classList.toggle("active");
+          panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+      }
+    });
+  </script>
+</body>
+</html>
